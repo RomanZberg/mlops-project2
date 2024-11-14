@@ -12,6 +12,8 @@ COPY pyproject.toml /pytorch-project/pyproject.toml
 RUN cd /pytorch-project &&\
 poetry install
 
+COPY . /pytorch-project
+
 CMD cd /pytorch-project && poetry shell
 
 FROM development AS train-model
