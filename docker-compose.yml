@@ -1,14 +1,14 @@
 services:
   dev-environment:
     build:
-      dockerfile: ./docker/Dockerfile
+      dockerfile: Dockerfile
       target: development
     volumes:
       - .:/pytorch-project
     env_file: ".env"
   train-model:
     build:
-      dockerfile: ./docker/Dockerfile
+      dockerfile: Dockerfile
       target: train-model
     volumes:
       - .:/pytorch-project
