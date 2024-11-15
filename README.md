@@ -4,6 +4,7 @@ For being able to use the contents of this repository, the following requirement
 - [Docker]( https://www.docker.com/) and [docker compose](https://docs.docker.com/compose/install/) is installed on your system
 - Operating system: macOS (intel) or linux (only tested on macOS and linux, most likely also works for windows, although some commands appearing in the readme might have to be adjusted )
 - 26 GB free memory space (for build docker images)
+
 **Note:** When the command ```docker-compose``` is not available on your system, try ```docker compose```, as this is the newer version but the commands in this readme should work the same. 
 
 
