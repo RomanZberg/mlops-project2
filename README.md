@@ -18,7 +18,7 @@ docker-compose build
 
 
 ### Setting Weights & Biases api key (required if you use docker-compose to run images)
-When you execute the training image with ```docker run```, you will be prompted for your wandb api key at some point. When using ```docker-compose run``` to run the training image It will use the api key specified in the ```.env``` file in your project root. Execute the following steps:
+When you execute the training image with ```docker run```, you will be prompted for your wandb api key at some point. When using ```docker-compose run``` to run the training image, it will use the api key specified in the ```.env``` file in your project root. Execute the following steps:
 ```bash
 cp .env_template .env
 ```
@@ -72,6 +72,12 @@ docker run -ite addArgs='--wandb-run-name-prefix my-run-prefix' mlops-project-2-
 - ```--wandb-project```: Name of the wandb project, to which the training is logged to 
 - ```--wandb-entity```: Name of the wandb entity, to which the training is logged to
 - ```--wandb-run-name-prefix```: Prefix added to a wandb run name
+
+If you don't want to be prompted for your wandb api key, you can pass your wandb api key like the following:
+```bash
+docker run -ite addArgs='--wandb-run-name-prefix my-run-prefix' -e WANDB_API_KEY=<api-key> mlops-project-2-train-model
+```
+**Note:** replace ```<api-key>``` with the key you get, by visiting [https://wandb.ai/authorize](https://wandb.ai/authorize)
 
 
 ### List possible configurable hyperparameters 
