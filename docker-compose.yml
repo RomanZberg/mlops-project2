@@ -3,6 +3,7 @@ services:
     build:
       dockerfile: Dockerfile
       target: development
+    image: mlops-project-2-dev-environment
     volumes:
       - .:/pytorch-project
     env_file: ".env"
@@ -10,6 +11,7 @@ services:
     build:
       dockerfile: Dockerfile
       target: train-model
+    image: mlops-project-2-train-model
     volumes:
       - .:/pytorch-project
     env_file: ".env"
