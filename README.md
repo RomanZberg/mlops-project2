@@ -3,7 +3,7 @@
 For being able to use the contents of this repository, the following requirements must be fulfilled.
 - [Docker]( https://www.docker.com/) and [docker compose](https://docs.docker.com/compose/install/) is installed on your system
 - Operating system: macOS (intel) or linux (only tested on macOS and linux, most likely also works for windows, although some commands appearing in the readme might have to be adjusted )
-
+- 26 GB free memory space (for build docker images)
 **Note:** When the command ```docker-compose``` is not available on your system, try ```docker compose```, as this is the newer version but the commands in this readme should work the same. 
 
 
@@ -49,6 +49,13 @@ docker-compose run --rm train-model
 ```bash
 docker run -it mlops-project-2-train-model
 ```
+
+If you don't want to be prompted for your wandb api key, you can pass your wandb api key like the following:
+```bash
+docker run -it -e WANDB_API_KEY=<api-key> mlops-project-2-train-model
+```
+**Note:** replace ```<api-key>``` with the key you get, by visiting [https://wandb.ai/authorize](https://wandb.ai/authorize)
+
 
 ### Run training run with the best current found hyperparameter settings with added arguments
 #### docker-compose run
